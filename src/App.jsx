@@ -6,11 +6,13 @@ import ComoPedimos from './components/ComoPedimos.jsx'
 import Contacto from './components/Contacto.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsAppFab from './components/WhatsAppFab.jsx'
+import CartDrawer from './components/CartDrawer.jsx'
+import { CartProvider } from './context/CartContext.jsx'
 import PRODUCTOS from './data/productos.js'
 
 export default function App() {
   return (
-    <>
+    <CartProvider>
       <a className="skip-link" href="#disponible-ahora">Ir al catálogo</a>
 
       <Header />
@@ -25,6 +27,7 @@ export default function App() {
 
       <Footer />
       <WhatsAppFab />
-    </>
+      <CartDrawer />
+    </CartProvider>
   )
 }

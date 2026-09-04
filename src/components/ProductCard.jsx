@@ -1,13 +1,26 @@
+import { useState } from 'react'
+import { useCart } from '../context/CartContext.jsx'
+import { formatPrecio } from '../utils/precio.js'
 import { waLink, mensajeConsultaProducto, mensajeReposicion } from '../utils/whatsapp.js'
 import { IconBottle, IconWhatsapp } from './icons.jsx'
 
 const GENERO_LABEL = { unisex: 'Unisex', masculino: 'Masculino', femenino: 'Femenino' }
 
 export default function ProductCard({ producto }) {
+  const { agregar } = useCart()
+  const [agregado, setAgregado] = useState(false)
+
   const agotado = producto.estado === 'agotado'
   const tieneImagen = Boolean(producto.imagen)
   const mensaje = agotado ? mensajeReposicion(producto) : mensajeConsultaProducto(producto)
   const cta = agotado ? 'Consultar reposición' : 'Consultar por WhatsApp'
+  const tienePrecio = typeof producto.precio === 'number' && producto.precio > 0
+
+  const handleAgregar = () => {
+    agregar(producto.id)
+    setAgregado(true)
+    setTimeout(() => setAgregado(false), 1200)
+  }
 
   return (
     <article className={`card${agotado ? ' card--agotada' : ''}`}>
@@ -52,12 +65,34 @@ export default function ProductCard({ producto }) {
         )}
 
         <div className="card__foot">
-          <a
-            className="btn btn--wa btn--sm btn--block"
-            href={waLink(mensaje)}
-            target="_blank"
-            rel="noopener"
-          >
+          {agotado ? (
+            <span className="card__price card__price--agotado">
+              Sin stock
+              <small>Consultá reposición</small>
+            </span>
+          ) : (
+            <div className="card__precio-row">
+              <span className="card__price">
+                {tienePrecio ? (
+                  formatPrecio(producto.precio)
+                ) : (
+                  <>
+                    A consultar
+                    <small>Te pasamos el precio</small>
+                  </>
+                )}
+              </span>
+              <button
+                type="button"
+                className={`btn btn--gold btn--sm card__add${agregado ? ' is-ok' : ''}`}
+                onClick={handleAgregar}
+              >
+                {agregado ? 'Agregado ✓' : 'Agregar'}
+              </button>
+            </div>
+          )}
+
+          <a className="card__consulta" href={waLink(mensaje)} target="_blank" rel="noopener">
             <IconWhatsapp />
             {cta}
           </a>

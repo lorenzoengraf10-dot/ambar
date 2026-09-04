@@ -1,5 +1,6 @@
 import CONFIG from '../data/config.js'
 import { waLink, mensajeConsultaGeneral } from '../utils/whatsapp.js'
+import CartButton from './CartButton.jsx'
 import { BrandMark, IconWhatsapp } from './icons.jsx'
 
 export default function Header() {
@@ -27,6 +28,7 @@ export default function Header() {
             <IconWhatsapp />
             WhatsApp
           </a>
+          <CartButton />
         </div>
       </div>
     </header>

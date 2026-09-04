@@ -7,6 +7,9 @@
    una fragancia sea así de simple: agregar o editar un bloque acá abajo y
    guardar. No hace falta tocar ningún componente ni el diseño.
 
+   ⚠️ Los precios de acá abajo son INVENTADOS (a pedido, para mostrar cómo
+   funciona el carrito) — reemplazarlos por los reales antes de publicar.
+
    Campos de cada producto
    -------------------------------------------------------------------------
    id           (texto)   Identificador único y corto, sin espacios (se usa
@@ -20,6 +23,9 @@
    dupe_de      (texto | null)  Si es una versión inspirada en un perfume
                           conocido, poné a qué perfume (ej: "Naxos de
                           Xerjoff"). Si no es un dupe, dejá null.
+   precio       (número | null)  Precio en pesos, ej: 78000 → se muestra
+                          "$ 78.000" y se puede agregar al carrito. Dejalo
+                          en null para que la ficha diga "A consultar".
    descripcion  (texto)   Una o dos líneas describiendo la fragancia.
    notas        (lista)   OPCIONAL. Notas olfativas principales, ej:
                           ["Bergamota", "Vainilla"]. Se muestran como
@@ -52,6 +58,7 @@ const PRODUCTOS = [
     casa: 'Rayhaan',
     familia: 'Verde, Cítrico y Amaderado',
     dupe_de: 'Santal Greenery de Dries Van Noten',
+    precio: 78000,
     descripcion:
       'Una fragancia fresca y sofisticada que combina la jugosidad del higo con cítricos luminosos, un corazón verde y acuático, y un fondo cremoso de sándalo: un aroma moderno, natural y refinado.',
     notas: ['Higo', 'Pomelo', 'Bergamota', 'Notas verdes', 'Notas acuáticas', 'Sándalo'],
@@ -66,6 +73,7 @@ const PRODUCTOS = [
     casa: 'Dumont Paris',
     familia: 'Aromático, Especiado y Dulce',
     dupe_de: 'Pegasus de Parfums de Marly',
+    precio: 85000,
     descripcion:
       'Una fragancia intensa y sofisticada: frescura cítrica y herbal en la salida, un corazón goloso y especiado, y un fondo ambarado y amaderado con carácter.',
     notas: ['Azahar', 'Canela', 'Limón', 'Salvia', 'Albahaca', 'Praliné', 'Cardamomo negro', 'Ámbar negro', 'Pachulí'],
@@ -80,6 +88,7 @@ const PRODUCTOS = [
     casa: 'Paris Corner',
     familia: 'Dulce, Especiado y Envolvente',
     dupe_de: 'Naxos de Xerjoff',
+    precio: 92000,
     descripcion:
       'Una fragancia sofisticada y envolvente que combina frescura aromática, miel especiada y un fondo avainillado con tabaco: un aroma elegante, cálido y adictivo.',
     notas: ['Lavanda', 'Bergamota', 'Miel', 'Cachemira', 'Canela', 'Jazmín', 'Tabaco', 'Vainilla', 'Haba tonka'],

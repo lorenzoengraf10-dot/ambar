@@ -10,23 +10,25 @@ const CONFIG = {
   ciudad: 'Viedma, Río Negro',
   bio: 'Perfumes Árabes Originales, +60 variedades, catálogo disponible',
 
-  /* ⚠️ IMPORTANTE — ANTES DE PUBLICAR:
-     Este es un número de ejemplo (placeholder), NO funciona todavía.
-     Los botones de WhatsApp arman el link como wa.me/<numero>?text=...
-     para poder precargar el nombre de cada fragancia en el mensaje —
-     eso requiere el número real en formato internacional, sin "+" ni
-     espacios (Argentina: 54 + 9 + característica sin 0 + número sin 15).
-
-     El link corto que pasó la clienta (wa.me/message/LFR4UQROYNRHC1) no
-     se pudo usar acá: ese formato no admite texto distinto por producto
-     de forma confiable, y no se pudo verificar su vigencia desde este
-     entorno. Reemplazar "whatsapp" por el número real resuelve todo el
-     sitio de una vez (un solo lugar para editar). */
-  whatsapp: '5492920000000',
-  whatsappVisible: 'Consultar número',
+  /* Número personal del cliente, a usar TEMPORALMENTE hasta tener el
+     número comercial definitivo (así lo pidió). Formato internacional,
+     sin "+" ni espacios: Argentina = 54 + 9 + 2920 (Viedma) + número. */
+  whatsapp: '5492920347453',
+  whatsappVisible: '2920 347453',
 
   instagram: 'https://www.instagram.com/ambarperfumesviedma',
   instagramVisible: '@ambarperfumesviedma',
+
+  moneda: '$',
+
+  /* ⚠️ DATOS INVENTADOS a pedido — reemplazar por los reales antes de
+     publicar. Se muestran en el carrito cuando alguien elige pagar por
+     transferencia (con botón de copiar cada dato). */
+  pago: {
+    titular: 'Ámbar Perfumes',
+    alias: 'ambar.perfumes.vied',
+    cvu: '0000003100012345678912',
+  },
 }
 
 export default CONFIG

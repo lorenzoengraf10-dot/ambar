@@ -22,6 +22,14 @@ export function IconPin(props) {
   )
 }
 
+export function IconBag(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M7 4h-.6a1 1 0 0 1 0-2H8a1 1 0 0 1 .98.8L9.3 4H20a1 1 0 0 1 .97 1.24l-1.7 6.8A2 2 0 0 1 17.33 13.6H9.9l.3 1.4H18a1 1 0 1 1 0 2H9.4a1 1 0 0 1-.98-.8L7 4Zm2.7 2 .8 5.6h6.83l1.4-5.6H9.7ZM10 18.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm7 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+    </svg>
+  )
+}
+
 export function IconBottle(props) {
   return (
     <svg className="frasco-ph" viewBox="0 0 48 64" fill="none" aria-hidden="true" {...props}>
@@ -33,15 +41,16 @@ export function IconBottle(props) {
   )
 }
 
-/* Isologo circular: "A" en serif rodeada de un anillo dorado — la misma
-   idea del logo real de la marca, en SVG para que se vea nítido en
+/* Isologo circular: fondo crema, anillo dorado y "A" en serif oscura —
+   la misma idea del isologo real (círculo crema con flores doradas y
+   una "A" negra), simplificada en SVG para que se vea nítida en
    cualquier tamaño (header, footer, favicon). */
 export function BrandMark({ size = 42 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="31" fill="#1d140d" stroke="#c9a24b" strokeWidth="1.2" />
-      <circle cx="32" cy="32" r="26" fill="none" stroke="#c9a24b" strokeOpacity="0.55" strokeWidth="1" />
-      <text x="32" y="42" textAnchor="middle" fontFamily="Playfair Display, Georgia, serif" fontSize="27" fontWeight="700" fill="#e3c888">
+      <circle cx="32" cy="32" r="31" fill="#FBF6E8" stroke="#C9852E" strokeWidth="1.2" />
+      <circle cx="32" cy="32" r="26" fill="none" stroke="#C9852E" strokeOpacity="0.5" strokeWidth="1" />
+      <text x="32" y="42" textAnchor="middle" fontFamily="Playfair Display, Georgia, serif" fontSize="27" fontWeight="700" fill="#1E1810">
         A
       </text>
     </svg>
