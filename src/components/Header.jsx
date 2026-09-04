@@ -23,13 +23,14 @@ export default function Header() {
             Ver disponible ahora
           </a>
           <a
-            className="btn btn--wa btn--sm"
+            className="btn btn--wa btn--sm header__wa"
             href={waLink(mensajeConsultaGeneral())}
             target="_blank"
             rel="noopener"
+            aria-label="Escribir por WhatsApp"
           >
             <IconWhatsapp />
-            WhatsApp
+            <span className="header__wa-label">WhatsApp</span>
           </a>
           <CartButton />
         </div>

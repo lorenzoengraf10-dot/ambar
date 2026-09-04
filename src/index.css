@@ -61,7 +61,6 @@ body {
   font-size: clamp(15.5px, 0.4vw + 15px, 17px);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -219,10 +218,20 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   margin-top: 3px;
 }
 
-.header__actions { display: flex; align-items: center; gap: 10px; }
+.header__actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .header__actions .btn--ghost { display: none; }
 @media (min-width: 640px) {
   .header__actions .btn--ghost { display: inline-flex; }
+}
+
+.brand { min-width: 0; }
+.brand__mark { min-width: 0; }
+.brand__word { min-width: 0; }
+
+@media (max-width: 430px) {
+  .header__wa-label { display: none; }
+  .header__wa { padding: 0; width: 44px; height: 44px; }
+  .brand__beta { display: none; }
 }
 
 .cartbtn {
@@ -321,8 +330,14 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
 /* ============================ FILTROS (CHIPS) ============================ */
 
 .filtros {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 40;
   display: flex; flex-wrap: wrap; gap: 10px;
-  margin: 0 0 36px;
+  padding: 14px 0;
+  margin: 0 0 22px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
 }
 
 .chip {
