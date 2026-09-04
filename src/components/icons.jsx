@@ -40,19 +40,3 @@ export function IconBottle(props) {
     </svg>
   )
 }
-
-/* Isologo circular: fondo crema, anillo dorado y "A" en serif oscura —
-   la misma idea del isologo real (círculo crema con flores doradas y
-   una "A" negra), simplificada en SVG para que se vea nítida en
-   cualquier tamaño (header, footer, favicon). */
-export function BrandMark({ size = 42 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="31" fill="#FBF6E8" stroke="#C9852E" strokeWidth="1.2" />
-      <circle cx="32" cy="32" r="26" fill="none" stroke="#C9852E" strokeOpacity="0.5" strokeWidth="1" />
-      <text x="32" y="42" textAnchor="middle" fontFamily="Playfair Display, Georgia, serif" fontSize="27" fontWeight="700" fill="#1E1810">
-        A
-      </text>
-    </svg>
-  )
-}
