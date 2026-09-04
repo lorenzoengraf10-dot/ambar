@@ -199,9 +199,19 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
 .brand__logo { width: 42px; height: 42px; flex-shrink: 0; }
 .brand__mark { display: flex; flex-direction: column; line-height: 1; }
 .brand__word {
+  display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-display);
   font-size: 1.28rem; font-weight: 700; letter-spacing: 0.04em;
   color: var(--ink);
+}
+.brand__beta {
+  font-family: var(--font-body);
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--on-gold);
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+  padding: 2px 7px;
+  border-radius: 999px;
 }
 .brand__sub {
   font-size: 0.62rem; font-weight: 600; letter-spacing: 0.32em;
@@ -235,6 +245,17 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   font-size: 0.7rem; font-weight: 700;
   box-shadow: 0 0 0 2px var(--cream);
 }
+
+.beta-banner {
+  margin: 0;
+  padding: 10px var(--gutter);
+  background: var(--cream-2);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.beta-banner strong { color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* ============================ HERO ============================ */
 

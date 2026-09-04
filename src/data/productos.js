@@ -7,8 +7,12 @@
    una fragancia sea así de simple: agregar o editar un bloque acá abajo y
    guardar. No hace falta tocar ningún componente ni el diseño.
 
-   ⚠️ Los precios de acá abajo son INVENTADOS (a pedido, para mostrar cómo
-   funciona el carrito) — reemplazarlos por los reales antes de publicar.
+   ⚠️ BETA — todo el catálogo de acá abajo es FICTICIO a propósito (nombres,
+   precios, notas, todo inventado), para poder mostrar el sitio funcionando
+   sin exponer stock ni precios reales todavía. Cuando esté listo para ir
+   en serio, reemplazar estos bloques por las fragancias reales (que ya
+   quedaron armadas — ver el historial — con foto, precio y datos de
+   Jungle Vibe, Nitro Blue y Voux Elegante).
 
    Campos de cada producto
    -------------------------------------------------------------------------
@@ -42,70 +46,65 @@
    tamano       (lista)   OPCIONAL. Tamaños disponibles, ej: ["30 ml",
                           "50 ml"]. Si se deja vacío, la ficha invita a
                           consultar el tamaño por WhatsApp.
-   esEjemplo    (true)    OPCIONAL. Marca la ficha como contenido de
-                          muestra (se usa solo en "Ediciones anteriores"
-                          mientras no haya fotos reales de esa sección).
+   esEjemplo    (true)    OPCIONAL. Marca la ficha con un cartel "Ejemplo"
+                          (se usa acá para dejar clarísimo qué es contenido
+                          de prueba y qué no).
    ========================================================================= */
-
-import jungleVibeImg from '../assets/productos/jungle-vibe.jpg'
-import nitroBlueImg from '../assets/productos/nitro-blue.jpg'
-import vouxEleganteImg from '../assets/productos/voux-elegante.jpg'
 
 const PRODUCTOS = [
   {
-    id: 'jungle-vibe',
-    nombre: 'Jungle Vibe',
-    casa: 'Rayhaan',
-    familia: 'Verde, Cítrico y Amaderado',
-    dupe_de: 'Santal Greenery de Dries Van Noten',
-    precio: 78000,
+    id: 'beta-brisa-citrica',
+    nombre: 'Brisa Cítrica',
+    casa: 'Casa Ámbar',
+    familia: 'Cítrico y Acuático',
+    dupe_de: null,
+    precio: 65000,
     descripcion:
-      'Una fragancia fresca y sofisticada que combina la jugosidad del higo con cítricos luminosos, un corazón verde y acuático, y un fondo cremoso de sándalo: un aroma moderno, natural y refinado.',
-    notas: ['Higo', 'Pomelo', 'Bergamota', 'Notas verdes', 'Notas acuáticas', 'Sándalo'],
+      'Producto de ejemplo (ficticio) para probar el sitio: salida cítrica luminosa sobre un fondo fresco y acuático, liviano y fácil de llevar.',
+    notas: ['Bergamota', 'Pomelo', 'Notas marinas'],
     genero: 'unisex',
     estado: 'disponible',
-    imagen: jungleVibeImg,
+    imagen: '',
     tamano: [],
+    esEjemplo: true,
   },
   {
-    id: 'nitro-blue',
-    nombre: 'Nitro Blue',
-    casa: 'Dumont Paris',
-    familia: 'Aromático, Especiado y Dulce',
-    dupe_de: 'Pegasus de Parfums de Marly',
-    precio: 85000,
+    id: 'beta-madera-ambar',
+    nombre: 'Madera & Ámbar',
+    casa: 'Casa Ámbar',
+    familia: 'Amaderado y Especiado',
+    dupe_de: 'un amaderado clásico de perfumería de nicho (referencia de ejemplo)',
+    precio: 79000,
     descripcion:
-      'Una fragancia intensa y sofisticada: frescura cítrica y herbal en la salida, un corazón goloso y especiado, y un fondo ambarado y amaderado con carácter.',
-    notas: ['Azahar', 'Canela', 'Limón', 'Salvia', 'Albahaca', 'Praliné', 'Cardamomo negro', 'Ámbar negro', 'Pachulí'],
+      'Producto de ejemplo (ficticio): base amaderada cálida con un toque especiado, pensado para mostrar cómo se ve el cartel de "dupe" en una ficha.',
+    notas: ['Cedro', 'Ámbar', 'Pimienta rosa'],
     genero: 'masculino',
     estado: 'disponible',
-    imagen: nitroBlueImg,
+    imagen: '',
     tamano: [],
+    esEjemplo: true,
   },
   {
-    id: 'voux-elegante',
-    nombre: 'Voux Elegante',
-    casa: 'Paris Corner',
-    familia: 'Dulce, Especiado y Envolvente',
-    dupe_de: 'Naxos de Xerjoff',
-    precio: 92000,
+    id: 'beta-flor-blanca',
+    nombre: 'Flor Blanca',
+    casa: 'Casa Ámbar',
+    familia: 'Floral',
+    dupe_de: null,
+    precio: 72000,
     descripcion:
-      'Una fragancia sofisticada y envolvente que combina frescura aromática, miel especiada y un fondo avainillado con tabaco: un aroma elegante, cálido y adictivo.',
-    notas: ['Lavanda', 'Bergamota', 'Miel', 'Cachemira', 'Canela', 'Jazmín', 'Tabaco', 'Vainilla', 'Haba tonka'],
-    genero: 'unisex',
+      'Producto de ejemplo (ficticio): ramo floral blanco, delicado y envolvente, con un fondo suave de almizcle.',
+    notas: ['Jazmín', 'Azahar', 'Almizcle'],
+    genero: 'femenino',
     estado: 'disponible',
-    imagen: vouxEleganteImg,
+    imagen: '',
     tamano: [],
+    esEjemplo: true,
   },
 
   /* -----------------------------------------------------------------------
-     "Ediciones anteriores" — contenido de EJEMPLO.
-     Todavía no tenemos fotos ni datos reales de fragancias agotadas, así
-     que estas dos fichas están para mostrar cómo funciona la sección: en
-     cuanto una fragancia de arriba se agote, alcanza con cambiarle el
-     "estado" a "agotado" y va a aparecer sola acá abajo, con foto y todo.
-     Se pueden borrar estos dos bloques de ejemplo cuando haya ediciones
-     anteriores reales para cargar.
+     "Ediciones anteriores" — también contenido de EJEMPLO, para mostrar
+     cómo se ve una fragancia agotada (misma mecánica que arriba: alcanza
+     con cambiar "estado" a "agotado" y la ficha se mueve sola acá).
      ----------------------------------------------------------------------- */
   {
     id: 'ejemplo-oud-real',

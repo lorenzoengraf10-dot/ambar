@@ -17,6 +17,11 @@ export default function App() {
 
       <Header />
 
+      <p className="beta-banner">
+        Versión <strong>beta</strong> — los productos que ves acá son de ejemplo (ficticios), para
+        probar el sitio antes de cargar el stock real.
+      </p>
+
       <main>
         <Hero />
         <DisponibleAhora productos={PRODUCTOS} />
