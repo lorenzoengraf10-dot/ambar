@@ -7,12 +7,13 @@
    una fragancia sea así de simple: agregar o editar un bloque acá abajo y
    guardar. No hace falta tocar ningún componente ni el diseño.
 
-   ⚠️ BETA — todo el catálogo de acá abajo es FICTICIO a propósito (nombres,
-   precios, notas, todo inventado), para poder mostrar el sitio funcionando
-   sin exponer stock ni precios reales todavía. Cuando esté listo para ir
-   en serio, reemplazar estos bloques por las fragancias reales (que ya
-   quedaron armadas — ver el historial — con foto, precio y datos de
-   Jungle Vibe, Nitro Blue y Voux Elegante).
+   ⚠️ Jungle Vibe, Nitro Blue y Voux Elegante ya son fragancias reales
+   (nombre, precio y datos confirmados) — solo les falta la foto del
+   frasco: no estaban en las fotos limpias de malhan, así que quedan con
+   imagen: '' (se ve el placeholder "Foto próximamente") hasta que lleguen
+   esas fotos. Los dos bloques de "Ediciones anteriores" siguen siendo de
+   EJEMPLO (ficticios) hasta que haya fragancias agotadas reales para
+   cargar ahí.
 
    Campos de cada producto
    -------------------------------------------------------------------------
@@ -53,52 +54,49 @@
 
 const PRODUCTOS = [
   {
-    id: 'beta-brisa-citrica',
-    nombre: 'Brisa Cítrica',
-    casa: 'Casa Ámbar',
-    familia: 'Cítrico y Acuático',
-    dupe_de: null,
-    precio: 65000,
+    id: 'jungle-vibe',
+    nombre: 'Jungle Vibe',
+    casa: 'Rayhaan',
+    familia: 'Verde, Cítrico y Amaderado',
+    dupe_de: 'Santal Greenery de Dries Van Noten',
+    precio: 78000,
     descripcion:
-      'Producto de ejemplo (ficticio) para probar el sitio: salida cítrica luminosa sobre un fondo fresco y acuático, liviano y fácil de llevar.',
-    notas: ['Bergamota', 'Pomelo', 'Notas marinas'],
+      'Una fragancia fresca y sofisticada que combina la jugosidad del higo con cítricos luminosos, un corazón verde y acuático, y un fondo cremoso de sándalo, logrando un aroma moderno, natural y refinado.',
+    notas: ['Higo', 'Pomelo', 'Bergamota', 'Notas verdes', 'Notas acuáticas', 'Sándalo'],
     genero: 'unisex',
     estado: 'disponible',
     imagen: '',
     tamano: [],
-    esEjemplo: true,
   },
   {
-    id: 'beta-madera-ambar',
-    nombre: 'Madera & Ámbar',
-    casa: 'Casa Ámbar',
-    familia: 'Amaderado y Especiado',
-    dupe_de: 'un amaderado clásico de perfumería de nicho (referencia de ejemplo)',
-    precio: 79000,
+    id: 'nitro-blue',
+    nombre: 'Nitro Blue',
+    casa: 'Dumont Paris',
+    familia: 'Aromático, Especiado y Dulce',
+    dupe_de: 'Pegasus de Parfums de Marly',
+    precio: 85000,
     descripcion:
-      'Producto de ejemplo (ficticio): base amaderada cálida con un toque especiado, pensado para mostrar cómo se ve el cartel de "dupe" en una ficha.',
-    notas: ['Cedro', 'Ámbar', 'Pimienta rosa'],
+      'Una fragancia intensa y sofisticada que mezcla frescura cítrica y herbal con un corazón goloso y especiado, terminando en un fondo ambarado y amaderado que transmite elegancia, carácter y sensualidad.',
+    notas: ['Azahar', 'Canela', 'Limón', 'Salvia', 'Albahaca', 'Praliné', 'Cardamomo negro', 'Ámbar negro', 'Pachulí'],
     genero: 'masculino',
     estado: 'disponible',
     imagen: '',
     tamano: [],
-    esEjemplo: true,
   },
   {
-    id: 'beta-flor-blanca',
-    nombre: 'Flor Blanca',
-    casa: 'Casa Ámbar',
-    familia: 'Floral',
-    dupe_de: null,
-    precio: 72000,
+    id: 'voux-elegante',
+    nombre: 'Voux Elegante',
+    casa: 'Paris Corner',
+    familia: 'Dulce, Especiado y Envolvente',
+    dupe_de: 'Naxos de Xerjoff',
+    precio: 92000,
     descripcion:
-      'Producto de ejemplo (ficticio): ramo floral blanco, delicado y envolvente, con un fondo suave de almizcle.',
-    notas: ['Jazmín', 'Azahar', 'Almizcle'],
-    genero: 'femenino',
+      'Una fragancia sofisticada y envolvente que combina frescura aromática, miel especiada y un fondo avainillado con tabaco, logrando un aroma elegante, cálido y adictivo.',
+    notas: ['Lavanda', 'Bergamota', 'Miel', 'Cachemira', 'Canela', 'Jazmín', 'Tabaco', 'Vainilla', 'Haba tonka'],
+    genero: 'unisex',
     estado: 'disponible',
     imagen: '',
     tamano: [],
-    esEjemplo: true,
   },
 
   /* -----------------------------------------------------------------------
