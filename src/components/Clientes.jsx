@@ -8,7 +8,6 @@ export default function Clientes() {
     <section className="clientes" id="clientes">
       <div className="wrap">
         <div className="sec-head">
-          <p className="eyebrow">Clientes</p>
           <h2 className="sec-title">Lo que dicen los que ya lo probaron</h2>
           <p className="sec-lead">
             Historias reales de gente que nos etiquetó en Instagram al recibir su perfume.
