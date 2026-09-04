@@ -7,7 +7,6 @@ export default function Contacto() {
     <section className="contacto" id="contacto">
       <div className="wrap">
         <div className="sec-head">
-          <p className="eyebrow">Contacto</p>
           <h2 className="sec-title">Hablemos</h2>
           <p className="sec-lead">{CONFIG.bio}</p>
         </div>

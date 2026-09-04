@@ -31,7 +31,6 @@ export default function DisponibleAhora({ productos }) {
     <section className="disponible-ahora" id="disponible-ahora">
       <div className="wrap">
         <div className="sec-head">
-          <p className="eyebrow">Stock de hoy</p>
           <h2 className="sec-title">Disponible ahora</h2>
           <p className="sec-lead">
             Esto es lo que tenemos en este momento. Tocá una familia para filtrar, o mandanos

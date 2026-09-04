@@ -12,12 +12,6 @@ export default function Hero() {
           Perfumes árabes originales, <em>disponibles hoy</em>.
         </h1>
 
-        <p className="hero__tagline">
-          Nada de esperar la próxima historia: acá abajo está, siempre actualizado, lo que
-          tenemos en stock ahora mismo. Elegís la fragancia, consultamos disponibilidad y
-          tamaño por WhatsApp, y coordinamos la entrega.
-        </p>
-
         <div className="hero__actions">
           <a className="btn btn--gold" href="#disponible-ahora">
             Ver disponible ahora
@@ -32,13 +26,6 @@ export default function Hero() {
             Consultar por WhatsApp
           </a>
         </div>
-
-        <ul className="hero__facts">
-          <li><strong>+60</strong> variedades</li>
-          <li><strong>Stock</strong> siempre actualizado</li>
-          <li><strong>Pedidos</strong> por WhatsApp</li>
-          <li><strong>Entrega</strong> a coordinar en Viedma</li>
-        </ul>
       </div>
     </section>
   )

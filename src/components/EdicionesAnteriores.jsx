@@ -15,7 +15,6 @@ export default function EdicionesAnteriores({ productos }) {
     <section className="ediciones-anteriores" id="ediciones-anteriores">
       <div className="wrap">
         <div className="sec-head">
-          <p className="eyebrow">Ya no están, pero volvieron a salir</p>
           <h2 className="sec-title">Ediciones anteriores</h2>
           <p className="sec-lead">
             Fragancias que ya se agotaron. Quedan acá como registro — si alguna vuelve a
