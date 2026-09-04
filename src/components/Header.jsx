@@ -1,14 +1,15 @@
 import CONFIG from '../data/config.js'
 import { waLink, mensajeConsultaGeneral } from '../utils/whatsapp.js'
 import CartButton from './CartButton.jsx'
-import { BrandMark, IconWhatsapp } from './icons.jsx'
+import { IconWhatsapp } from './icons.jsx'
+import logo from '../assets/marca/logo.png'
 
 export default function Header() {
   return (
     <header className="header">
       <div className="wrap header__inner">
         <a className="brand" href="#inicio" aria-label={`${CONFIG.nombre} — inicio`}>
-          <BrandMark />
+          <img className="brand__logo" src={logo} alt="" width="42" height="42" />
           <span className="brand__mark">
             <span className="brand__word">
               Ámbar

@@ -182,7 +182,8 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand__logo { width: 42px; height: 42px; flex-shrink: 0; }
+.brand__logo { width: 42px; height: 42px; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
+.brand__logo--sm { width: 34px; height: 34px; }
 .brand__mark { display: flex; flex-direction: column; line-height: 1; }
 .brand__word {
   display: inline-flex; align-items: center; gap: 8px;
