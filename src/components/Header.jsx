@@ -11,10 +11,7 @@ export default function Header() {
         <a className="brand" href="#inicio" aria-label={`${CONFIG.nombre} — inicio`}>
           <img className="brand__logo" src={logo} alt="" width="42" height="42" />
           <span className="brand__mark">
-            <span className="brand__word">
-              Ámbar
-              <span className="brand__beta">Beta</span>
-            </span>
+            <span className="brand__word">Ámbar</span>
             <span className="brand__sub">Perfumes</span>
           </span>
         </a>

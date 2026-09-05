@@ -2,8 +2,8 @@
 
 Sitio de catálogo para Ámbar Perfumes (Viedma, Río Negro). Sin backend ni
 pasarela de pago: el carrito arma el pedido y lo manda por WhatsApp, ya sea
-para pagar en efectivo o por transferencia. React + Vite, pensado para
-desplegarse en Vercel.
+para pagar en efectivo o por transferencia. React + Vite, publicado en
+GitHub Pages.
 
 ## Cómo actualizar el stock
 
@@ -74,6 +74,12 @@ npm run lint      # chequeo de código
 
 ## Deploy
 
-Proyecto estándar de Vite: en Vercel, importar el repo y usar los
-defaults (`npm run build`, carpeta de salida `dist`) — no hace falta
-configuración adicional.
+Se publica solo en GitHub Pages con cada push a `main`, vía el workflow
+`.github/workflows/deploy-pages.yml` (build + deploy con GitHub Actions).
+Link: `https://lorenzoengraf10-dot.github.io/ambar/`.
+
+También es un proyecto estándar de Vite, así que si en algún momento
+conviene pasarlo a Vercel: importar el repo ahí y usar los defaults
+(`npm run build`, carpeta de salida `dist`) — no hace falta configuración
+adicional, salvo sacar el `base` condicional de `vite.config.js` (ese
+`/ambar/` es específico de GitHub Pages).
