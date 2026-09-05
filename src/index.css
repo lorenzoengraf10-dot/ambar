@@ -361,6 +361,7 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   background: rgba(30, 24, 16, 0.68);
   border: 1px solid rgba(255, 255, 255, 0.14);
   color: var(--gold-soft);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 .card__ribbon--agotado { color: #fff; }
@@ -374,6 +375,7 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   background: rgba(30, 24, 16, 0.68);
   border: 1px solid rgba(255, 255, 255, 0.14);
   color: #f1e9d5;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
@@ -633,6 +635,7 @@ a.contacto__item:hover { border-color: var(--gold); transform: translateY(-2px);
 .cart__backdrop {
   position: absolute; inset: 0;
   background: rgba(30, 24, 16, 0.45);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   padding: 0;
   cursor: pointer;
