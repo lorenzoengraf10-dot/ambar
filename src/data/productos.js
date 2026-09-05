@@ -7,13 +7,8 @@
    una fragancia sea así de simple: agregar o editar un bloque acá abajo y
    guardar. No hace falta tocar ningún componente ni el diseño.
 
-   ⚠️ Jungle Vibe, Nitro Blue y Voux Elegante ya son fragancias reales
-   (nombre, precio y datos confirmados) — solo les falta la foto del
-   frasco: no estaban en las fotos limpias de malhan, así que quedan con
-   imagen: '' (se ve el placeholder "Foto próximamente") hasta que lleguen
-   esas fotos. Los dos bloques de "Ediciones anteriores" siguen siendo de
-   EJEMPLO (ficticios) hasta que haya fragancias agotadas reales para
-   cargar ahí.
+   ⚠️ Los dos bloques de "Ediciones anteriores" siguen siendo de EJEMPLO
+   (ficticios) hasta que haya fragancias agotadas reales para cargar ahí.
 
    Campos de cada producto
    -------------------------------------------------------------------------
@@ -51,6 +46,9 @@
                           (se usa acá para dejar clarísimo qué es contenido
                           de prueba y qué no).
    ========================================================================= */
+import jungleVibeImg from '../assets/productos/jungle-vibe.jpg'
+import nitroBlueImg from '../assets/productos/nitro-blue.jpg'
+import vouxEleganteImg from '../assets/productos/voux-elegante.jpg'
 
 const PRODUCTOS = [
   {
@@ -65,7 +63,7 @@ const PRODUCTOS = [
     notas: ['Higo', 'Pomelo', 'Bergamota', 'Notas verdes', 'Notas acuáticas', 'Sándalo'],
     genero: 'unisex',
     estado: 'disponible',
-    imagen: '',
+    imagen: jungleVibeImg,
     tamano: [],
   },
   {
@@ -80,7 +78,7 @@ const PRODUCTOS = [
     notas: ['Azahar', 'Canela', 'Limón', 'Salvia', 'Albahaca', 'Praliné', 'Cardamomo negro', 'Ámbar negro', 'Pachulí'],
     genero: 'masculino',
     estado: 'disponible',
-    imagen: '',
+    imagen: nitroBlueImg,
     tamano: [],
   },
   {
@@ -95,7 +93,7 @@ const PRODUCTOS = [
     notas: ['Lavanda', 'Bergamota', 'Miel', 'Cachemira', 'Canela', 'Jazmín', 'Tabaco', 'Vainilla', 'Haba tonka'],
     genero: 'unisex',
     estado: 'disponible',
-    imagen: '',
+    imagen: vouxEleganteImg,
     tamano: [],
   },
 
