@@ -9,6 +9,8 @@
 
    ⚠️ Los precios de acá abajo son INVENTADOS (a pedido, para mostrar cómo
    funciona el carrito) — reemplazarlos por los reales antes de publicar.
+   Los dos bloques de "Ediciones anteriores" también siguen siendo de
+   EJEMPLO (ficticios) hasta que haya fragancias agotadas reales.
 
    Campos de cada producto
    -------------------------------------------------------------------------
@@ -46,7 +48,6 @@
                           muestra (se usa solo en "Ediciones anteriores"
                           mientras no haya fotos reales de esa sección).
    ========================================================================= */
-
 import jungleVibeImg from '../assets/productos/jungle-vibe.jpg'
 import nitroBlueImg from '../assets/productos/nitro-blue.jpg'
 import vouxEleganteImg from '../assets/productos/voux-elegante.jpg'
@@ -60,7 +61,7 @@ const PRODUCTOS = [
     dupe_de: 'Santal Greenery de Dries Van Noten',
     precio: 78000,
     descripcion:
-      'Una fragancia fresca y sofisticada que combina la jugosidad del higo con cítricos luminosos, un corazón verde y acuático, y un fondo cremoso de sándalo: un aroma moderno, natural y refinado.',
+      'Una fragancia fresca y sofisticada que combina la jugosidad del higo con cítricos luminosos, un corazón verde y acuático, y un fondo cremoso de sándalo, logrando un aroma moderno, natural y refinado.',
     notas: ['Higo', 'Pomelo', 'Bergamota', 'Notas verdes', 'Notas acuáticas', 'Sándalo'],
     genero: 'unisex',
     estado: 'disponible',
@@ -75,7 +76,7 @@ const PRODUCTOS = [
     dupe_de: 'Pegasus de Parfums de Marly',
     precio: 85000,
     descripcion:
-      'Una fragancia intensa y sofisticada: frescura cítrica y herbal en la salida, un corazón goloso y especiado, y un fondo ambarado y amaderado con carácter.',
+      'Una fragancia intensa y sofisticada que mezcla frescura cítrica y herbal con un corazón goloso y especiado, terminando en un fondo ambarado y amaderado que transmite elegancia, carácter y sensualidad.',
     notas: ['Azahar', 'Canela', 'Limón', 'Salvia', 'Albahaca', 'Praliné', 'Cardamomo negro', 'Ámbar negro', 'Pachulí'],
     genero: 'masculino',
     estado: 'disponible',
@@ -90,7 +91,7 @@ const PRODUCTOS = [
     dupe_de: 'Naxos de Xerjoff',
     precio: 92000,
     descripcion:
-      'Una fragancia sofisticada y envolvente que combina frescura aromática, miel especiada y un fondo avainillado con tabaco: un aroma elegante, cálido y adictivo.',
+      'Una fragancia sofisticada y envolvente que combina frescura aromática, miel especiada y un fondo avainillado con tabaco, logrando un aroma elegante, cálido y adictivo.',
     notas: ['Lavanda', 'Bergamota', 'Miel', 'Cachemira', 'Canela', 'Jazmín', 'Tabaco', 'Vainilla', 'Haba tonka'],
     genero: 'unisex',
     estado: 'disponible',

@@ -2,6 +2,7 @@ import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import DisponibleAhora from './components/DisponibleAhora.jsx'
 import EdicionesAnteriores from './components/EdicionesAnteriores.jsx'
+import Clientes from './components/Clientes.jsx'
 import ComoPedimos from './components/ComoPedimos.jsx'
 import Contacto from './components/Contacto.jsx'
 import Footer from './components/Footer.jsx'
@@ -21,6 +22,7 @@ export default function App() {
         <Hero />
         <DisponibleAhora productos={PRODUCTOS} />
         <EdicionesAnteriores productos={PRODUCTOS} />
+        <Clientes />
         <ComoPedimos />
         <Contacto />
       </main>
