@@ -30,7 +30,7 @@ export default function App() {
         <CategoryShowcase categoria={categoria} onChange={setCategoria} />
         <DisponibleAhora productos={PRODUCTOS} oculto={categoria !== 'todos' && categoria !== 'stock'} />
         <EdicionesAnteriores productos={PRODUCTOS} oculto={categoria !== 'todos' && categoria !== 'anteriores'} />
-        <Recomendacion productos={PRODUCTOS} oculto={categoria !== 'todos' && categoria !== 'recomendacion'} />
+        <Recomendacion productos={PRODUCTOS} oculto={categoria !== 'recomendacion'} />
         <Clientes />
         <ComoPedimos />
         <Contacto />
