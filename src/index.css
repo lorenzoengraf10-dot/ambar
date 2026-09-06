@@ -305,6 +305,75 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   font-weight: 600;
 }
 
+/* ============================ BARRA DE CATEGORÍAS (header) ============================
+   Pastillas fijas justo debajo del header (Todos / Stock / Productos
+   anteriores / Nuestra Recomendación): tocar una filtra el catálogo entero,
+   igual que las tarjetas de la vidriera de abajo — mismo mecanismo que
+   malhan.vercel.app. */
+.catnav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 90;
+  background: rgba(251, 246, 232, 0.92);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border-bottom: 1px solid var(--line);
+}
+.catnav__inner {
+  display: flex; gap: 10px;
+  padding-block: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.catnav__inner::-webkit-scrollbar { display: none; }
+.catnav .chip { flex: none; }
+
+/* ============================ VIDRIERA DE CATEGORÍAS ============================
+   Tarjetas grandes para elegir categoría de un vistazo (mismo espíritu que
+   la vidriera de malhan.vercel.app, sin foto propia todavía: quedan con el
+   degradé de marca nomás). Tocar una hace lo mismo que tocar su pastilla
+   de arriba. */
+.catshowcase { padding: clamp(28px, 4vw, 40px) 0 6px; }
+.catshowcase__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.catshowcase__tile {
+  position: relative;
+  display: flex; align-items: flex-end;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 220px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gold-deep), var(--ink));
+  box-shadow: var(--shadow-md);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.catshowcase__tile:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.catshowcase__tile:active { transform: scale(0.98); }
+.catshowcase__tile--active { box-shadow: 0 0 0 2px var(--gold), var(--shadow-md); }
+.catshowcase__tile--wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 21 / 9;
+  max-height: 220px;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
+}
+.catshowcase__label {
+  position: relative;
+  z-index: 1;
+  padding: 16px 20px;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 /* ============================ GRILLA / TARJETAS ============================ */
 
 .grid {
@@ -330,7 +399,7 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
 
 .card__media {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background:
     radial-gradient(ellipse at 50% 30%, rgba(201, 133, 46, 0.12), transparent 60%),
     var(--cream-2);

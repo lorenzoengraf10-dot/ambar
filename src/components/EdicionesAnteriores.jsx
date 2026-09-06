@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import ProductCard from './ProductCard.jsx'
 
-export default function EdicionesAnteriores({ productos }) {
+export default function EdicionesAnteriores({ productos, oculto }) {
   const agotadas = useMemo(
     () => productos.filter((p) => p.estado === 'agotado'),
     [productos],
@@ -12,7 +12,7 @@ export default function EdicionesAnteriores({ productos }) {
   const hayEjemplos = agotadas.some((p) => p.esEjemplo)
 
   return (
-    <section className="ediciones-anteriores" id="ediciones-anteriores">
+    <section className="ediciones-anteriores" id="ediciones-anteriores" hidden={oculto}>
       <div className="wrap">
         <div className="sec-head">
           <h2 className="sec-title">Ediciones anteriores</h2>

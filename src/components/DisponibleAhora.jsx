@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import FamilyFilter from './FamilyFilter.jsx'
 import ProductCard from './ProductCard.jsx'
 
-export default function DisponibleAhora({ productos }) {
+export default function DisponibleAhora({ productos, oculto }) {
   const disponibles = useMemo(
     () => productos.filter((p) => p.estado === 'disponible'),
     [productos],
@@ -28,7 +28,7 @@ export default function DisponibleAhora({ productos }) {
       : disponibles.filter((p) => p.familia === familiaActiva)
 
   return (
-    <section className="disponible-ahora" id="disponible-ahora">
+    <section className="disponible-ahora" id="disponible-ahora" hidden={oculto}>
       <div className="wrap">
         <div className="sec-head">
           <h2 className="sec-title">Disponible ahora</h2>

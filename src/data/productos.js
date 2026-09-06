@@ -47,6 +47,9 @@
    esEjemplo    (true)    OPCIONAL. Marca la ficha como contenido de
                           muestra (se usa solo en "Ediciones anteriores"
                           mientras no haya fotos reales de esa sección).
+   recomendado  (true)    OPCIONAL. La suma a la sección/categoría "Nuestra
+                          Recomendación". Se puede marcar cualquier fragancia
+                          disponible — no hace falta que sean todas.
    ========================================================================= */
 import jungleVibeImg from '../assets/productos/jungle-vibe.jpg'
 import nitroBlueImg from '../assets/productos/nitro-blue.jpg'
@@ -67,6 +70,7 @@ const PRODUCTOS = [
     estado: 'disponible',
     imagen: jungleVibeImg,
     tamano: [],
+    recomendado: true,
   },
   {
     id: 'nitro-blue',
@@ -82,6 +86,7 @@ const PRODUCTOS = [
     estado: 'disponible',
     imagen: nitroBlueImg,
     tamano: [],
+    recomendado: true,
   },
   {
     id: 'voux-elegante',
@@ -97,6 +102,7 @@ const PRODUCTOS = [
     estado: 'disponible',
     imagen: vouxEleganteImg,
     tamano: [],
+    recomendado: true,
   },
 
   /* -----------------------------------------------------------------------
