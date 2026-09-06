@@ -305,6 +305,15 @@ section { padding: clamp(56px, 9vw, 108px) 0; }
   font-weight: 600;
 }
 
+/* Fila de género en "Nuestra recomendación": mismos .chip que el resto,
+   pero sin sticky — la fila que sí queda fija al scrollear es la de
+   familia (.filtros, reutilizada de FamilyFilter), y dos barras sticky
+   una encima de la otra en la misma sección se pisarían. */
+.filtros-genero {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  padding: 0 0 14px;
+}
+
 /* ============================ BARRA DE CATEGORÍAS (header) ============================
    Pastillas fijas justo debajo del header (Todos / Stock / Productos
    anteriores / Nuestra Recomendación): tocar una filtra el catálogo entero,
